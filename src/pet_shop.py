@@ -6,10 +6,11 @@ def get_total_cash(pet_shop):
     return pet_shop["admin"]["total_cash"]
 
 def add_cash(pet_shop, cash_amount):
-    pet_shop["admin"]["total_cash"] = (pet_shop["admin"]["total_cash"] + cash_amount)
+    pet_shop["admin"]["total_cash"] += cash_amount
+    # pet_shop["admin"]["total_cash"] = (pet_shop["admin"]["total_cash"] + cash_amount)
 
 def remove_cash(pet_shop, cash_amount):
-    pet_shop["admin"]["total_cash"] = (pet_shop["admin"]["total_cash"] - 10)
+    pet_shop["admin"]["total_cash"] += cash_amount
     
 def get_pets_sold(pet_shop):
     return pet_shop["admin"]["pets_sold"]
@@ -54,7 +55,30 @@ def remove_pet_by_name(pet_shop, pet_name):
 
 def add_pet_to_stock(pet_shop, new_pet):
     pet_shop["pets"].append(new_pet)
-    
+
+def get_customer_cash(customers):
+    return customers["cash"]
+    # return customers[0]["cash"]
+
+def remove_customer_cash(customers, cash_amount):
+    customers["cash"] -= cash_amount
+
+
+def get_customer_pet_count(customers):
+    return len(customers["pets"])
+
+def add_pet_to_customer(customers, new_pet):
+    customers["pets"].append(new_pet)
+
+
+
+
+
+
+
+
+
+
 
 
 
